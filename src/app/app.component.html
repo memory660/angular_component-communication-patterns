@@ -1,0 +1,35 @@
+<h2>unrelated - app-toast</h2>
+<app-toast></app-toast>
+
+<hr />
+
+<h2>sibling -</h2>
+<p>un conteneur parent sous la forme d'une directive</p>
+<p><... appParent></p>
+<p>child1...</p>
+<p>child2...</p>
+<p>/</p>
+<p>
+  les enfants communique via l'observable qui se trouve dans la directive du
+  parent
+</p>
+<div appParent>
+  <app-child-one></app-child-one>
+  <app-child-two></app-child-two>
+</div>
+
+<hr />
+
+<h2>parentToChild</h2>
+<app-parent></app-parent>
+
+<hr />
+
+<h2>unrelated - app-activator</h2>
+<div>
+  <app-activator></app-activator>
+</div>
+
+<hr />
+<h2>multiDirectionData</h2>
+<app-multi-parent></app-multi-parent>

@@ -1,0 +1,23 @@
+<p>
+  le but est de declencher un evenement dans les composants enfants avec :
+  (click)="state.next('Running')"
+</p>
+<p>
+  quand les composants enfants ont finis leurs taches, ils informent le parent
+  avec : this.state.next('Complete!');
+</p>
+
+<h3>{{ state.value }}</h3>
+<button #startBtn type="button" (click)="state.next('Running')">Start</button>
+<app-multi-child
+  [eventStream]="eventStream$"
+  [loadtime]="3000"
+  (done)="updateStatus($event)"
+></app-multi-child>
+<app-multi-child
+  [eventStream]="eventStream$"
+  [loadtime]="5000"
+  (done)="updateStatus($event)"
+></app-multi-child>
+
+counter = {{ counter }}
